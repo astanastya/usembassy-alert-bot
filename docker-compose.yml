@@ -1,0 +1,9 @@
+services:
+  usembassy-alert-bot:
+    build: .
+    container_name: usembassy-alert-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
